@@ -13,6 +13,15 @@
 		89319FF11E4BA88D00179185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89319FF01E4BA88D00179185 /* Assets.xcassets */; };
 		89319FF41E4BA88D00179185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FF21E4BA88D00179185 /* LaunchScreen.storyboard */; };
 		89319FFF1E4BA88D00179185 /* FieldToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FFE1E4BA88D00179185 /* FieldToolTests.swift */; };
+		8931A0101E50886300179185 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A00F1E50886300179185 /* Geometry.swift */; };
+		8931A0111E50886300179185 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A00F1E50886300179185 /* Geometry.swift */; };
+		8931A0141E50889B00179185 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8931A0131E50889B00179185 /* CoreLocation.framework */; };
+		8931A0161E50890100179185 /* WKTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A0151E50890100179185 /* WKTType.swift */; };
+		8931A0171E50890100179185 /* WKTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A0151E50890100179185 /* WKTType.swift */; };
+		8931A01C1E508D7600179185 /* WKTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A01B1E508D7600179185 /* WKTParser.swift */; };
+		8931A01D1E508D7600179185 /* WKTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A01B1E508D7600179185 /* WKTParser.swift */; };
+		8931A0201E508E1A00179185 /* String+WKTHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A01F1E508E1A00179185 /* String+WKTHelpers.swift */; };
+		8931A0211E508E1A00179185 /* String+WKTHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A01F1E508E1A00179185 /* String+WKTHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,11 @@
 		89319FFA1E4BA88D00179185 /* FieldToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89319FFE1E4BA88D00179185 /* FieldToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldToolTests.swift; sourceTree = "<group>"; };
 		8931A0001E4BA88D00179185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8931A00F1E50886300179185 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Sources/Models/Geometry.swift; sourceTree = "<group>"; };
+		8931A0131E50889B00179185 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8931A0151E50890100179185 /* WKTType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTType.swift; path = Sources/Models/WKTType.swift; sourceTree = "<group>"; };
+		8931A01B1E508D7600179185 /* WKTParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTParser.swift; path = Sources/Parsers/WKTParser.swift; sourceTree = "<group>"; };
+		8931A01F1E508E1A00179185 /* String+WKTHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+WKTHelpers.swift"; path = "Sources/Foundation/String+WKTHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8931A0141E50889B00179185 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +77,7 @@
 				89319FE81E4BA88D00179185 /* FieldTool */,
 				89319FFD1E4BA88D00179185 /* FieldToolTests */,
 				89319FE71E4BA88D00179185 /* Products */,
+				8931A0121E50889A00179185 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +93,8 @@
 		89319FE81E4BA88D00179185 /* FieldTool */ = {
 			isa = PBXGroup;
 			children = (
-				89319FE91E4BA88D00179185 /* AppDelegate.swift */,
-				89319FEB1E4BA88D00179185 /* ViewController.swift */,
-				89319FED1E4BA88D00179185 /* Main.storyboard */,
-				89319FF01E4BA88D00179185 /* Assets.xcassets */,
-				89319FF21E4BA88D00179185 /* LaunchScreen.storyboard */,
+				8931A0091E5087B300179185 /* Sources */,
+				8931A00E1E5087EC00179185 /* Storyboards */,
 				89319FF51E4BA88D00179185 /* Info.plist */,
 			);
 			path = FieldTool;
@@ -94,6 +107,69 @@
 				8931A0001E4BA88D00179185 /* Info.plist */,
 			);
 			path = FieldToolTests;
+			sourceTree = "<group>";
+		};
+		8931A0091E5087B300179185 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				89319FF01E4BA88D00179185 /* Assets.xcassets */,
+				89319FE91E4BA88D00179185 /* AppDelegate.swift */,
+				8931A01E1E508DEF00179185 /* Foundation */,
+				8931A00D1E5087D700179185 /* ViewControllers */,
+				8931A00C1E5087D100179185 /* Parsers */,
+				8931A00A1E5087C400179185 /* Models */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		8931A00A1E5087C400179185 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8931A00F1E50886300179185 /* Geometry.swift */,
+				8931A0151E50890100179185 /* WKTType.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8931A00C1E5087D100179185 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				8931A01B1E508D7600179185 /* WKTParser.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		8931A00D1E5087D700179185 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				89319FEB1E4BA88D00179185 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8931A00E1E5087EC00179185 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				89319FED1E4BA88D00179185 /* Main.storyboard */,
+				89319FF21E4BA88D00179185 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		8931A0121E50889A00179185 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8931A0131E50889B00179185 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8931A01E1E508DEF00179185 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				8931A01F1E508E1A00179185 /* String+WKTHelpers.swift */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8931A0201E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
+				8931A0161E50890100179185 /* WKTType.swift in Sources */,
 				89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */,
+				8931A0101E50886300179185 /* Geometry.swift in Sources */,
+				8931A01C1E508D7600179185 /* WKTParser.swift in Sources */,
 				89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89319FFF1E4BA88D00179185 /* FieldToolTests.swift in Sources */,
+				8931A0171E50890100179185 /* WKTType.swift in Sources */,
+				8931A0111E50886300179185 /* Geometry.swift in Sources */,
+				8931A01D1E508D7600179185 /* WKTParser.swift in Sources */,
+				8931A0211E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +494,7 @@
 				8931A0051E4BA88D00179185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8931A0061E4BA88D00179185 /* Build configuration list for PBXNativeTarget "FieldToolTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +503,7 @@
 				8931A0081E4BA88D00179185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
