@@ -14,8 +14,8 @@
 		89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FED1E4BA88D00179185 /* Main.storyboard */; };
 		89319FF11E4BA88D00179185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89319FF01E4BA88D00179185 /* Assets.xcassets */; };
 		89319FF41E4BA88D00179185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FF21E4BA88D00179185 /* LaunchScreen.storyboard */; };
-		8931A0101E50886300179185 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A00F1E50886300179185 /* Geometry.swift */; };
-		8931A0111E50886300179185 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A00F1E50886300179185 /* Geometry.swift */; };
+		8931A0101E50886300179185 /* CoordinatesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A00F1E50886300179185 /* CoordinatesCollection.swift */; };
+		8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A00F1E50886300179185 /* CoordinatesCollection.swift */; };
 		8931A0141E50889B00179185 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8931A0131E50889B00179185 /* CoreLocation.framework */; };
 		8931A0161E50890100179185 /* WKTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A0151E50890100179185 /* WKTType.swift */; };
 		8931A0171E50890100179185 /* WKTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931A0151E50890100179185 /* WKTType.swift */; };
@@ -47,7 +47,7 @@
 		89319FF51E4BA88D00179185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89319FFA1E4BA88D00179185 /* FieldToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8931A0001E4BA88D00179185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8931A00F1E50886300179185 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Sources/Models/Geometry.swift; sourceTree = "<group>"; };
+		8931A00F1E50886300179185 /* CoordinatesCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordinatesCollection.swift; path = Sources/Models/CoordinatesCollection.swift; sourceTree = "<group>"; };
 		8931A0131E50889B00179185 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8931A0151E50890100179185 /* WKTType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTType.swift; path = Sources/Models/WKTType.swift; sourceTree = "<group>"; };
 		8931A01B1E508D7600179185 /* WKTParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTParser.swift; path = Sources/Parsers/WKTParser.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		8931A00A1E5087C400179185 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8931A00F1E50886300179185 /* Geometry.swift */,
+				8931A00F1E50886300179185 /* CoordinatesCollection.swift */,
 				8931A0151E50890100179185 /* WKTType.swift */,
 			);
 			name = Models;
@@ -283,7 +283,7 @@
 				8931A0201E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
 				8931A0161E50890100179185 /* WKTType.swift in Sources */,
 				89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */,
-				8931A0101E50886300179185 /* Geometry.swift in Sources */,
+				8931A0101E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				8931A01C1E508D7600179185 /* WKTParser.swift in Sources */,
 				89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */,
 			);
@@ -295,7 +295,7 @@
 			files = (
 				890F951E1E54B4EA00589BA4 /* StringWKTHelpersTests.swift in Sources */,
 				8931A0171E50890100179185 /* WKTType.swift in Sources */,
-				8931A0111E50886300179185 /* Geometry.swift in Sources */,
+				8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				8931A01D1E508D7600179185 /* WKTParser.swift in Sources */,
 				8931A0211E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
 				890F95201E54C09900589BA4 /* WKTParserTests.swift in Sources */,
