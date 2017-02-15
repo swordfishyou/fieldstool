@@ -9,23 +9,23 @@
 import CoreLocation
 
 protocol WKTParserType {
-    func parse(_ string: String) -> WKTType?
+    func parse(_ input: String) -> WKTType?
 }
 
 struct WKTParser: WKTParserType {
     private let delimiter = "\t"
     
-    func parse(_ string: String) -> WKTType? {
-        if string.isEmpty {
+    func parse(_ input: String) -> WKTType? {
+        if input.isEmpty {
             return nil
         }
         
         var coordinates = [CoordinatesCollection]()
-        for component in string.geometryComponents(separatedBy: self.delimiter) {
+        for component in input.geometryComponents(separatedBy: self.delimiter) {
             coordinates.append(self.coordinatesCollection(from: component))
         }
         
-        return WKTType(name: string.geometryName(), components: coordinates)
+        return WKTType(name: input.geometryName(), components: coordinates)
     }
     
     private func coordinatesCollection(from component: String) -> CoordinatesCollection {
