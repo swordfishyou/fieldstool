@@ -22,14 +22,6 @@ protocol Geometry: CoordinatesCollection {
 }
 
 extension Geometry {
-    var renderer: MKOverlayRenderer? {
-        return nil
-    }
-    
-    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
-        return false
-    }
-    
     func contains<T : Geometry>(geometry: T) -> Bool {
         for coordinate in self.coordinates {
             if !geometry.contains(coordinate: coordinate) {
@@ -63,7 +55,8 @@ extension Geometry where Self.ShapeRenderer: MKOverlayPathRenderer {
             return false
         }
         
-        return renderer.path.contains(renderer.point(for: MKMapPointForCoordinate(coordinate)))
+        let point = MKMapPointForCoordinate(coordinate)
+        return renderer.path.contains(renderer.point(for: point))
     }
 }
 
@@ -78,6 +71,14 @@ struct Point: Geometry {
 
     var center: CLLocationCoordinate2D {
         return self.coordinates.first!
+    }
+    
+    var renderer: MKOverlayRenderer? {
+        return nil
+    }
+    
+    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
+        return false
     }
 }
 
@@ -104,8 +105,8 @@ struct Polygon: Geometry {
     var interiorPolygons: [Polygon]?
     
     var shape: MKPolygon {
-        let interior = self.interiorPolygons?.map { $0.shape }
-        return MKPolygon(coordinates: self.coordinates, count: self.coordinates.count, interiorPolygons: interior)
+        let polygons = self.interiorPolygons?.map { $0.shape }
+        return MKPolygon(coordinates: self.coordinates, count: self.coordinates.count, interiorPolygons: polygons)
     }
     
     var renderer: MKPolygonRenderer? {

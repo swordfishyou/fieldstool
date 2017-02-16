@@ -11,6 +11,8 @@
 		890F95201E54C09900589BA4 /* WKTParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F951F1E54C09900589BA4 /* WKTParserTests.swift */; };
 		890F95221E54DA3F00589BA4 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95211E54DA3F00589BA4 /* Geometry.swift */; };
 		890F95231E54DA3F00589BA4 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95211E54DA3F00589BA4 /* Geometry.swift */; };
+		890F95321E56271000589BA4 /* WKTSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95311E56271000589BA4 /* WKTSerialization.swift */; };
+		890F95331E56271000589BA4 /* WKTSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95311E56271000589BA4 /* WKTSerialization.swift */; };
 		89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FE91E4BA88D00179185 /* AppDelegate.swift */; };
 		89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FEB1E4BA88D00179185 /* ViewController.swift */; };
 		89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FED1E4BA88D00179185 /* Main.storyboard */; };
@@ -41,6 +43,7 @@
 		890F951D1E54B4EA00589BA4 /* StringWKTHelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringWKTHelpersTests.swift; sourceTree = "<group>"; };
 		890F951F1E54C09900589BA4 /* WKTParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKTParserTests.swift; sourceTree = "<group>"; };
 		890F95211E54DA3F00589BA4 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Sources/Models/Geometry.swift; sourceTree = "<group>"; };
+		890F95311E56271000589BA4 /* WKTSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTSerialization.swift; path = Sources/Serialization/WKTSerialization.swift; sourceTree = "<group>"; };
 		89319FE61E4BA88D00179185 /* FieldTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89319FE91E4BA88D00179185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89319FEB1E4BA88D00179185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890F95301E5626E300589BA4 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				890F95311E56271000589BA4 /* WKTSerialization.swift */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
 		89319FDD1E4BA88D00179185 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +131,7 @@
 			children = (
 				89319FF01E4BA88D00179185 /* Assets.xcassets */,
 				89319FE91E4BA88D00179185 /* AppDelegate.swift */,
+				890F95301E5626E300589BA4 /* Serialization */,
 				8931A01E1E508DEF00179185 /* Foundation */,
 				8931A00D1E5087D700179185 /* ViewControllers */,
 				8931A00C1E5087D100179185 /* Parsers */,
@@ -289,6 +301,7 @@
 				8931A0161E50890100179185 /* WKTType.swift in Sources */,
 				89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */,
 				8931A0101E50886300179185 /* CoordinatesCollection.swift in Sources */,
+				890F95321E56271000589BA4 /* WKTSerialization.swift in Sources */,
 				8931A01C1E508D7600179185 /* WKTParser.swift in Sources */,
 				89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */,
 			);
@@ -303,6 +316,7 @@
 				8931A0171E50890100179185 /* WKTType.swift in Sources */,
 				8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				8931A01D1E508D7600179185 /* WKTParser.swift in Sources */,
+				890F95331E56271000589BA4 /* WKTSerialization.swift in Sources */,
 				8931A0211E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
 				890F95201E54C09900589BA4 /* WKTParserTests.swift in Sources */,
 			);
