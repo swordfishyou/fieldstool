@@ -36,6 +36,10 @@
 		890F95591E58594100589BA4 /* HotspotsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95571E58594100589BA4 /* HotspotsStorage.swift */; };
 		890F95661E5863AB00589BA4 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95651E5863AB00589BA4 /* JSONSerializer.swift */; };
 		890F95671E5863AB00589BA4 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95651E5863AB00589BA4 /* JSONSerializer.swift */; };
+		890F956A1E586FD300589BA4 /* FieldAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95691E586FD300589BA4 /* FieldAnnotation.swift */; };
+		890F956B1E586FD300589BA4 /* FieldAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95691E586FD300589BA4 /* FieldAnnotation.swift */; };
+		890F956D1E58708400589BA4 /* HotspotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F956C1E58708400589BA4 /* HotspotAnnotation.swift */; };
+		890F956E1E58708400589BA4 /* HotspotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F956C1E58708400589BA4 /* HotspotAnnotation.swift */; };
 		89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FE91E4BA88D00179185 /* AppDelegate.swift */; };
 		89319FEC1E4BA88D00179185 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FEB1E4BA88D00179185 /* MapViewController.swift */; };
 		89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FED1E4BA88D00179185 /* Main.storyboard */; };
@@ -79,6 +83,8 @@
 		890F95541E58518600589BA4 /* FieldsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldsStorage.swift; path = Sources/DataProviders/FieldsStorage.swift; sourceTree = "<group>"; };
 		890F95571E58594100589BA4 /* HotspotsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotspotsStorage.swift; path = Sources/DataProviders/HotspotsStorage.swift; sourceTree = "<group>"; };
 		890F95651E5863AB00589BA4 /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializer.swift; path = Sources/Serialization/JSONSerializer.swift; sourceTree = "<group>"; };
+		890F95691E586FD300589BA4 /* FieldAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldAnnotation.swift; path = Sources/Annotations/FieldAnnotation.swift; sourceTree = "<group>"; };
+		890F956C1E58708400589BA4 /* HotspotAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotspotAnnotation.swift; path = Sources/Annotations/HotspotAnnotation.swift; sourceTree = "<group>"; };
 		89319FE61E4BA88D00179185 /* FieldTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89319FE91E4BA88D00179185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89319FEB1E4BA88D00179185 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +160,15 @@
 			name = Geometry;
 			sourceTree = "<group>";
 		};
+		890F95681E586EDA00589BA4 /* Anntotations */ = {
+			isa = PBXGroup;
+			children = (
+				890F95691E586FD300589BA4 /* FieldAnnotation.swift */,
+				890F956C1E58708400589BA4 /* HotspotAnnotation.swift */,
+			);
+			name = Anntotations;
+			sourceTree = "<group>";
+		};
 		89319FDD1E4BA88D00179185 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +215,7 @@
 			children = (
 				89319FF01E4BA88D00179185 /* Assets.xcassets */,
 				89319FE91E4BA88D00179185 /* AppDelegate.swift */,
+				890F95681E586EDA00589BA4 /* Anntotations */,
 				890F95401E584F8400589BA4 /* DataStorage */,
 				890F95301E5626E300589BA4 /* Serialization */,
 				8931A01E1E508DEF00179185 /* Foundation */,
@@ -378,8 +394,10 @@
 				890F954F1E5850C100589BA4 /* Polygon.swift in Sources */,
 				8931A0161E50890100179185 /* WKTType.swift in Sources */,
 				89319FEC1E4BA88D00179185 /* MapViewController.swift in Sources */,
+				890F956A1E586FD300589BA4 /* FieldAnnotation.swift in Sources */,
 				890F95551E58518600589BA4 /* FieldsStorage.swift in Sources */,
 				8931A0101E50886300179185 /* CoordinatesCollection.swift in Sources */,
+				890F956D1E58708400589BA4 /* HotspotAnnotation.swift in Sources */,
 				890F95421E584FF500589BA4 /* Field.swift in Sources */,
 				890F95661E5863AB00589BA4 /* JSONSerializer.swift in Sources */,
 				890F95491E5850A500589BA4 /* Point.swift in Sources */,
@@ -403,6 +421,7 @@
 				890F95231E54DA3F00589BA4 /* Geometry.swift in Sources */,
 				8931A0171E50890100179185 /* WKTType.swift in Sources */,
 				890F95351E56287500589BA4 /* PointTests.swift in Sources */,
+				890F956B1E586FD300589BA4 /* FieldAnnotation.swift in Sources */,
 				8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				890F95501E5850C100589BA4 /* Polygon.swift in Sources */,
 				8931A01D1E508D7600179185 /* WKTParser.swift in Sources */,
@@ -412,6 +431,7 @@
 				890F954A1E5850A500589BA4 /* Point.swift in Sources */,
 				890F95461E58504800589BA4 /* Hotspot.swift in Sources */,
 				8931A0211E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
+				890F956E1E58708400589BA4 /* HotspotAnnotation.swift in Sources */,
 				890F95201E54C09900589BA4 /* WKTParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
