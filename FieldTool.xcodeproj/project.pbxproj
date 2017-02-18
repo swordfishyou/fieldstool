@@ -18,6 +18,24 @@
 		890F953D1E584EDD00589BA4 /* fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953A1E584EDD00589BA4 /* fields.json */; };
 		890F953E1E584EDD00589BA4 /* hotspots.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953B1E584EDD00589BA4 /* hotspots.json */; };
 		890F953F1E584EDD00589BA4 /* hotspots.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953B1E584EDD00589BA4 /* hotspots.json */; };
+		890F95421E584FF500589BA4 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95411E584FF500589BA4 /* Field.swift */; };
+		890F95431E584FF500589BA4 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95411E584FF500589BA4 /* Field.swift */; };
+		890F95451E58504800589BA4 /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95441E58504800589BA4 /* Hotspot.swift */; };
+		890F95461E58504800589BA4 /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95441E58504800589BA4 /* Hotspot.swift */; };
+		890F95491E5850A500589BA4 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95481E5850A500589BA4 /* Point.swift */; };
+		890F954A1E5850A500589BA4 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95481E5850A500589BA4 /* Point.swift */; };
+		890F954C1E5850B300589BA4 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F954B1E5850B300589BA4 /* Line.swift */; };
+		890F954D1E5850B300589BA4 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F954B1E5850B300589BA4 /* Line.swift */; };
+		890F954F1E5850C100589BA4 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F954E1E5850C100589BA4 /* Polygon.swift */; };
+		890F95501E5850C100589BA4 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F954E1E5850C100589BA4 /* Polygon.swift */; };
+		890F95521E58514D00589BA4 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95511E58514D00589BA4 /* DataStorage.swift */; };
+		890F95531E58514D00589BA4 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95511E58514D00589BA4 /* DataStorage.swift */; };
+		890F95551E58518600589BA4 /* FieldsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95541E58518600589BA4 /* FieldsStorage.swift */; };
+		890F95561E58518600589BA4 /* FieldsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95541E58518600589BA4 /* FieldsStorage.swift */; };
+		890F95581E58594100589BA4 /* HotspotsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95571E58594100589BA4 /* HotspotsStorage.swift */; };
+		890F95591E58594100589BA4 /* HotspotsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95571E58594100589BA4 /* HotspotsStorage.swift */; };
+		890F95661E5863AB00589BA4 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95651E5863AB00589BA4 /* JSONSerializer.swift */; };
+		890F95671E5863AB00589BA4 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95651E5863AB00589BA4 /* JSONSerializer.swift */; };
 		89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FE91E4BA88D00179185 /* AppDelegate.swift */; };
 		89319FEC1E4BA88D00179185 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FEB1E4BA88D00179185 /* MapViewController.swift */; };
 		89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FED1E4BA88D00179185 /* Main.storyboard */; };
@@ -52,6 +70,15 @@
 		890F95341E56287500589BA4 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
 		890F953A1E584EDD00589BA4 /* fields.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fields.json; path = Resources/fields.json; sourceTree = SOURCE_ROOT; };
 		890F953B1E584EDD00589BA4 /* hotspots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hotspots.json; path = Resources/hotspots.json; sourceTree = SOURCE_ROOT; };
+		890F95411E584FF500589BA4 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Field.swift; path = Sources/Models/Field.swift; sourceTree = "<group>"; };
+		890F95441E58504800589BA4 /* Hotspot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hotspot.swift; path = Sources/Models/Hotspot.swift; sourceTree = "<group>"; };
+		890F95481E5850A500589BA4 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Sources/Models/Point.swift; sourceTree = "<group>"; };
+		890F954B1E5850B300589BA4 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Line.swift; path = Sources/Models/Line.swift; sourceTree = "<group>"; };
+		890F954E1E5850C100589BA4 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Polygon.swift; path = Sources/Models/Polygon.swift; sourceTree = "<group>"; };
+		890F95511E58514D00589BA4 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStorage.swift; path = Sources/DataProviders/DataStorage.swift; sourceTree = "<group>"; };
+		890F95541E58518600589BA4 /* FieldsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldsStorage.swift; path = Sources/DataProviders/FieldsStorage.swift; sourceTree = "<group>"; };
+		890F95571E58594100589BA4 /* HotspotsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotspotsStorage.swift; path = Sources/DataProviders/HotspotsStorage.swift; sourceTree = "<group>"; };
+		890F95651E5863AB00589BA4 /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializer.swift; path = Sources/Serialization/JSONSerializer.swift; sourceTree = "<group>"; };
 		89319FE61E4BA88D00179185 /* FieldTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89319FE91E4BA88D00179185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89319FEB1E4BA88D00179185 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				890F95311E56271000589BA4 /* WKTSerialization.swift */,
+				890F95651E5863AB00589BA4 /* JSONSerializer.swift */,
 			);
 			name = Serialization;
 			sourceTree = "<group>";
@@ -102,6 +130,28 @@
 				890F953B1E584EDD00589BA4 /* hotspots.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		890F95401E584F8400589BA4 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				890F95511E58514D00589BA4 /* DataStorage.swift */,
+				890F95541E58518600589BA4 /* FieldsStorage.swift */,
+				890F95571E58594100589BA4 /* HotspotsStorage.swift */,
+			);
+			name = DataStorage;
+			sourceTree = "<group>";
+		};
+		890F95471E58508E00589BA4 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				8931A00F1E50886300179185 /* CoordinatesCollection.swift */,
+				890F95211E54DA3F00589BA4 /* Geometry.swift */,
+				890F95481E5850A500589BA4 /* Point.swift */,
+				890F954B1E5850B300589BA4 /* Line.swift */,
+				890F954E1E5850C100589BA4 /* Polygon.swift */,
+			);
+			name = Geometry;
 			sourceTree = "<group>";
 		};
 		89319FDD1E4BA88D00179185 = {
@@ -150,6 +200,7 @@
 			children = (
 				89319FF01E4BA88D00179185 /* Assets.xcassets */,
 				89319FE91E4BA88D00179185 /* AppDelegate.swift */,
+				890F95401E584F8400589BA4 /* DataStorage */,
 				890F95301E5626E300589BA4 /* Serialization */,
 				8931A01E1E508DEF00179185 /* Foundation */,
 				8931A00D1E5087D700179185 /* ViewControllers */,
@@ -162,9 +213,10 @@
 		8931A00A1E5087C400179185 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8931A00F1E50886300179185 /* CoordinatesCollection.swift */,
+				890F95471E58508E00589BA4 /* Geometry */,
 				8931A0151E50890100179185 /* WKTType.swift */,
-				890F95211E54DA3F00589BA4 /* Geometry.swift */,
+				890F95411E584FF500589BA4 /* Field.swift */,
+				890F95441E58504800589BA4 /* Hotspot.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -319,12 +371,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890F95581E58594100589BA4 /* HotspotsStorage.swift in Sources */,
 				8931A0201E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
+				890F95451E58504800589BA4 /* Hotspot.swift in Sources */,
 				890F95221E54DA3F00589BA4 /* Geometry.swift in Sources */,
+				890F954F1E5850C100589BA4 /* Polygon.swift in Sources */,
 				8931A0161E50890100179185 /* WKTType.swift in Sources */,
 				89319FEC1E4BA88D00179185 /* MapViewController.swift in Sources */,
+				890F95551E58518600589BA4 /* FieldsStorage.swift in Sources */,
 				8931A0101E50886300179185 /* CoordinatesCollection.swift in Sources */,
+				890F95421E584FF500589BA4 /* Field.swift in Sources */,
+				890F95661E5863AB00589BA4 /* JSONSerializer.swift in Sources */,
+				890F95491E5850A500589BA4 /* Point.swift in Sources */,
+				890F95521E58514D00589BA4 /* DataStorage.swift in Sources */,
 				890F95321E56271000589BA4 /* WKTSerialization.swift in Sources */,
+				890F954C1E5850B300589BA4 /* Line.swift in Sources */,
 				8931A01C1E508D7600179185 /* WKTParser.swift in Sources */,
 				89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */,
 			);
@@ -334,13 +395,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890F95431E584FF500589BA4 /* Field.swift in Sources */,
+				890F95591E58594100589BA4 /* HotspotsStorage.swift in Sources */,
+				890F95561E58518600589BA4 /* FieldsStorage.swift in Sources */,
 				890F951E1E54B4EA00589BA4 /* StringWKTHelpersTests.swift in Sources */,
+				890F95671E5863AB00589BA4 /* JSONSerializer.swift in Sources */,
 				890F95231E54DA3F00589BA4 /* Geometry.swift in Sources */,
 				8931A0171E50890100179185 /* WKTType.swift in Sources */,
 				890F95351E56287500589BA4 /* PointTests.swift in Sources */,
 				8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */,
+				890F95501E5850C100589BA4 /* Polygon.swift in Sources */,
 				8931A01D1E508D7600179185 /* WKTParser.swift in Sources */,
+				890F954D1E5850B300589BA4 /* Line.swift in Sources */,
 				890F95331E56271000589BA4 /* WKTSerialization.swift in Sources */,
+				890F95531E58514D00589BA4 /* DataStorage.swift in Sources */,
+				890F954A1E5850A500589BA4 /* Point.swift in Sources */,
+				890F95461E58504800589BA4 /* Hotspot.swift in Sources */,
 				8931A0211E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
 				890F95201E54C09900589BA4 /* WKTParserTests.swift in Sources */,
 			);
