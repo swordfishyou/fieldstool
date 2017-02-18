@@ -13,6 +13,7 @@
 		890F95231E54DA3F00589BA4 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95211E54DA3F00589BA4 /* Geometry.swift */; };
 		890F95321E56271000589BA4 /* WKTSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95311E56271000589BA4 /* WKTSerialization.swift */; };
 		890F95331E56271000589BA4 /* WKTSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95311E56271000589BA4 /* WKTSerialization.swift */; };
+		890F95351E56287500589BA4 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95341E56287500589BA4 /* PointTests.swift */; };
 		89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FE91E4BA88D00179185 /* AppDelegate.swift */; };
 		89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FEB1E4BA88D00179185 /* ViewController.swift */; };
 		89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FED1E4BA88D00179185 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		890F951F1E54C09900589BA4 /* WKTParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKTParserTests.swift; sourceTree = "<group>"; };
 		890F95211E54DA3F00589BA4 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Sources/Models/Geometry.swift; sourceTree = "<group>"; };
 		890F95311E56271000589BA4 /* WKTSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTSerialization.swift; path = Sources/Serialization/WKTSerialization.swift; sourceTree = "<group>"; };
+		890F95341E56287500589BA4 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
 		89319FE61E4BA88D00179185 /* FieldTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89319FE91E4BA88D00179185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89319FEB1E4BA88D00179185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				8931A0001E4BA88D00179185 /* Info.plist */,
 				890F951D1E54B4EA00589BA4 /* StringWKTHelpersTests.swift */,
 				890F951F1E54C09900589BA4 /* WKTParserTests.swift */,
+				890F95341E56287500589BA4 /* PointTests.swift */,
 			);
 			path = FieldToolTests;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				890F951E1E54B4EA00589BA4 /* StringWKTHelpersTests.swift in Sources */,
 				890F95231E54DA3F00589BA4 /* Geometry.swift in Sources */,
 				8931A0171E50890100179185 /* WKTType.swift in Sources */,
+				890F95351E56287500589BA4 /* PointTests.swift in Sources */,
 				8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				8931A01D1E508D7600179185 /* WKTParser.swift in Sources */,
 				890F95331E56271000589BA4 /* WKTSerialization.swift in Sources */,
