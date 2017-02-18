@@ -14,8 +14,12 @@
 		890F95321E56271000589BA4 /* WKTSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95311E56271000589BA4 /* WKTSerialization.swift */; };
 		890F95331E56271000589BA4 /* WKTSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95311E56271000589BA4 /* WKTSerialization.swift */; };
 		890F95351E56287500589BA4 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95341E56287500589BA4 /* PointTests.swift */; };
+		890F953C1E584EDD00589BA4 /* fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953A1E584EDD00589BA4 /* fields.json */; };
+		890F953D1E584EDD00589BA4 /* fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953A1E584EDD00589BA4 /* fields.json */; };
+		890F953E1E584EDD00589BA4 /* hotspots.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953B1E584EDD00589BA4 /* hotspots.json */; };
+		890F953F1E584EDD00589BA4 /* hotspots.json in Resources */ = {isa = PBXBuildFile; fileRef = 890F953B1E584EDD00589BA4 /* hotspots.json */; };
 		89319FEA1E4BA88D00179185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FE91E4BA88D00179185 /* AppDelegate.swift */; };
-		89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FEB1E4BA88D00179185 /* ViewController.swift */; };
+		89319FEC1E4BA88D00179185 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319FEB1E4BA88D00179185 /* MapViewController.swift */; };
 		89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FED1E4BA88D00179185 /* Main.storyboard */; };
 		89319FF11E4BA88D00179185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89319FF01E4BA88D00179185 /* Assets.xcassets */; };
 		89319FF41E4BA88D00179185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89319FF21E4BA88D00179185 /* LaunchScreen.storyboard */; };
@@ -46,9 +50,11 @@
 		890F95211E54DA3F00589BA4 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Sources/Models/Geometry.swift; sourceTree = "<group>"; };
 		890F95311E56271000589BA4 /* WKTSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTSerialization.swift; path = Sources/Serialization/WKTSerialization.swift; sourceTree = "<group>"; };
 		890F95341E56287500589BA4 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
+		890F953A1E584EDD00589BA4 /* fields.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fields.json; path = Resources/fields.json; sourceTree = SOURCE_ROOT; };
+		890F953B1E584EDD00589BA4 /* hotspots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hotspots.json; path = Resources/hotspots.json; sourceTree = SOURCE_ROOT; };
 		89319FE61E4BA88D00179185 /* FieldTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89319FE91E4BA88D00179185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89319FEB1E4BA88D00179185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89319FEB1E4BA88D00179185 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		89319FEE1E4BA88D00179185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89319FF01E4BA88D00179185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89319FF31E4BA88D00179185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,15 @@
 			name = Serialization;
 			sourceTree = "<group>";
 		};
+		890F95391E584ECD00589BA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				890F953A1E584EDD00589BA4 /* fields.json */,
+				890F953B1E584EDD00589BA4 /* hotspots.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		89319FDD1E4BA88D00179185 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +128,7 @@
 			children = (
 				8931A0091E5087B300179185 /* Sources */,
 				8931A00E1E5087EC00179185 /* Storyboards */,
+				890F95391E584ECD00589BA4 /* Resources */,
 				89319FF51E4BA88D00179185 /* Info.plist */,
 			);
 			path = FieldTool;
@@ -164,7 +180,7 @@
 		8931A00D1E5087D700179185 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				89319FEB1E4BA88D00179185 /* ViewController.swift */,
+				89319FEB1E4BA88D00179185 /* MapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -281,7 +297,9 @@
 			files = (
 				89319FF41E4BA88D00179185 /* LaunchScreen.storyboard in Resources */,
 				89319FF11E4BA88D00179185 /* Assets.xcassets in Resources */,
+				890F953C1E584EDD00589BA4 /* fields.json in Resources */,
 				89319FEF1E4BA88D00179185 /* Main.storyboard in Resources */,
+				890F953E1E584EDD00589BA4 /* hotspots.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +307,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890F953D1E584EDD00589BA4 /* fields.json in Resources */,
+				890F953F1E584EDD00589BA4 /* hotspots.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +322,7 @@
 				8931A0201E508E1A00179185 /* String+WKTHelpers.swift in Sources */,
 				890F95221E54DA3F00589BA4 /* Geometry.swift in Sources */,
 				8931A0161E50890100179185 /* WKTType.swift in Sources */,
-				89319FEC1E4BA88D00179185 /* ViewController.swift in Sources */,
+				89319FEC1E4BA88D00179185 /* MapViewController.swift in Sources */,
 				8931A0101E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				890F95321E56271000589BA4 /* WKTSerialization.swift in Sources */,
 				8931A01C1E508D7600179185 /* WKTParser.swift in Sources */,

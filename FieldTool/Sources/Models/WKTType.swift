@@ -12,11 +12,10 @@ struct WKTType {
 
 extension WKTType: Hashable {
     public var hashValue: Int {
-        let prime = 31
         var result = 1
         
         self.components.map { $0.coordinates }.flatMap { $0 }.forEach {
-            result = prime + $0.hashValue
+            result = result + $0.hashValue
         }
         
         return result
