@@ -11,7 +11,7 @@ import MapKit
 struct Point: Geometry {
     var coordinates: [CLLocationCoordinate2D]
     
-    var shape: MKShape {
+    var shape: Shape {
         let shape = MKPointAnnotation()
         shape.coordinate = self.coordinates.first!
         return shape
@@ -21,11 +21,7 @@ struct Point: Geometry {
         return self.coordinates.first!
     }
     
-    var renderer: MKOverlayRenderer? {
+    var renderer: Renderer? {
         return nil
-    }
-    
-    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
-        return false
     }
 }

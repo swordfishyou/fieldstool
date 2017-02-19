@@ -9,16 +9,13 @@
 import MapKit
 
 struct Line: Geometry {
-    typealias Shape = MKPolyline
-    typealias ShapeRenderer = MKPolylineRenderer
-    
     var coordinates: [CLLocationCoordinate2D]
     
-    var shape: MKPolyline {
+    var shape: Shape {
         return MKPolyline(coordinates: self.coordinates, count: self.coordinates.count)
     }
     
-    var renderer: MKPolylineRenderer? {
-        return MKPolylineRenderer(polyline: self.shape)
+    var renderer: Renderer? {
+        return MKPolylineRenderer(overlay: self.shape.overlay!)
     }
 }

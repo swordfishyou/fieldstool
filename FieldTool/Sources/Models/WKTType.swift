@@ -12,7 +12,7 @@ struct WKTType {
 
 extension WKTType: Hashable {
     public var hashValue: Int {
-        var result = 1
+        var result = 31
         
         self.components.map { $0.coordinates }.flatMap { $0 }.forEach {
             result = result + $0.hashValue

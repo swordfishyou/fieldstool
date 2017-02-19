@@ -9,26 +9,8 @@
 import MapKit
 
 protocol MapViewDataSource {
-    func overlays() -> [MKOverlay]?
-    func annotations() -> [MKAnnotation]?
+    var overlays: [MKOverlay] { get }
+    var annotations: [MKAnnotation] { get }
+    var boundingRect: MKMapRect { get }
     func renderer(for overlay: MKOverlay) -> MKOverlayRenderer?
-    func boundingRect() -> MKMapRect
-}
-
-extension MKMapRect {
-    func union(_ rect: MKMapRect) -> MKMapRect {
-        if MKMapRectIsNull(self) {
-            return rect
-        }
-        
-        return MKMapRectUnion(self, rect)
-    }
-}
-
-extension MKOverlayPathRenderer {
-    func apply(_ styles: GeometryStyle) {
-        self.lineWidth = styles.lineWidth
-        self.strokeColor = styles.strokeColor
-        self.fillColor = styles.fillColor
-    }
 }

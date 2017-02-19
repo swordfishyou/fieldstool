@@ -8,12 +8,18 @@
 
 import MapKit
 
-class HotspotAnnotation: MKPointAnnotation {
-    var hotspot: Hotspot
+class HotspotAnnotation: MKPointAnnotation, GeometryAnnotation {
+    typealias Object = Hotspot
+    var object: Hotspot
     
-    init(hotspot: Hotspot) {
-        self.hotspot = hotspot
+    required init(object: Hotspot) {
+        self.object = object
         super.init()
-        self.title = "Hotspot"
+        self.title = object.title
+        self.subtitle = object.subtitle
+    }
+    
+    func set(coordinate: CLLocationCoordinate2D) {
+        self.coordinate = coordinate
     }
 }

@@ -17,7 +17,7 @@ struct FieldAnntotationController: AnntotationController {
     }
     
     func configurate(_ view: FieldAnnotationView, with annotation: FieldAnnotation) {
-        view.titleLabel.text = annotation.field.number
+        view.titleLabel.text = annotation.object.number
         view.canShowCallout = true
         view.setNeedsLayout()
         view.centerOffset = CGPoint(x: 0, y: -view.bounds.midY)

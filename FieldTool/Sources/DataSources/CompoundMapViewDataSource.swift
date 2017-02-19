@@ -11,12 +11,12 @@ import MapKit
 struct CompoundMapViewDataSource: MapViewDataSource {
     var dataSources: [MapViewDataSource]
     
-    func annotations() -> [MKAnnotation]? {
-        return self.dataSources.map { $0.annotations() }.flatMap { $0 }.flatMap { $0 }
+    var annotations: [MKAnnotation] {
+        return self.dataSources.map { $0.annotations }.flatMap { $0 }
     }
     
-    func overlays() -> [MKOverlay]? {
-        return self.dataSources.map { $0.overlays() }.flatMap { $0 }.flatMap { $0 }
+    var overlays: [MKOverlay] {
+        return self.dataSources.map { $0.overlays }.flatMap { $0 }
     }
     
     func renderer(for overlay: MKOverlay) -> MKOverlayRenderer? {
@@ -29,7 +29,7 @@ struct CompoundMapViewDataSource: MapViewDataSource {
         return nil
     }
     
-    func boundingRect() -> MKMapRect {
-        return self.dataSources.reduce(MKMapRectNull) { $0.union($1.boundingRect()) }
+    var boundingRect: MKMapRect {
+        return self.dataSources.reduce(MKMapRectNull) { $0.union(with: $1.boundingRect) }
     }
 }

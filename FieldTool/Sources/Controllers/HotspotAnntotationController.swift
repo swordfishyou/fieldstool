@@ -17,7 +17,7 @@ struct HotspotAnntotationController: AnntotationController {
     }
     
     func configurate(_ view: MKAnnotationView, with annotation: HotspotAnnotation) {
-        view.image = UIImage(named: annotation.hotspot.annotationImageName)
+        view.image = UIImage(named: annotation.object.annotationImageName)
         view.centerOffset = CGPoint(x: 0, y: -view.bounds.midY)
     }
 }

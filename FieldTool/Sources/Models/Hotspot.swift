@@ -12,10 +12,22 @@ struct Hotspot {
     var identifier: Int
     var type: Int
     var geometryString: String
-}
-
-extension Hotspot {
+    
     var annotationImageName: String {
         return "map-annotation-\(self.type)"
+    }
+}
+
+extension Hotspot: GeometryContainer {
+    var title: String {
+        return "Hotspot"
+    }
+    
+    var subtitle: String {
+        return ""
+    }
+    
+    var style: GeometryStyle {
+        return HotspotStyle()
     }
 }

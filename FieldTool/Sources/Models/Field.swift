@@ -17,8 +17,16 @@ struct Field {
     var cropColorString: String
 }
 
-extension Field {
-    var styles: FieldStyle {
+extension Field: GeometryContainer {
+    var title: String {
+        return "\(self.number) \(self.name)"
+    }
+    
+    var subtitle: String {
+        return "\(self.area)"
+    }
+    
+    var style: GeometryStyle {
         return FieldStyle(fillColor: UIColor(hexString: self.cropColorString)!)
     }
 }

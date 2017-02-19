@@ -25,19 +25,19 @@ struct SegmentedMapViewDataSource: MapViewDataSource {
         self.selectedDataSource = self.dataSources[0]
     }
     
-    func annotations() -> [MKAnnotation]? {
-        return self.selectedDataSource.annotations()
+    var annotations: [MKAnnotation] {
+        return self.selectedDataSource.annotations
     }
     
-    func overlays() -> [MKOverlay]? {
-        return self.selectedDataSource.overlays()
+    var overlays: [MKOverlay] {
+        return self.selectedDataSource.overlays
     }
     
     func renderer(for overlay: MKOverlay) -> MKOverlayRenderer? {
         return self.selectedDataSource.renderer(for: overlay)
     }
     
-    func boundingRect() -> MKMapRect {
-        return self.selectedDataSource.boundingRect()
+    var boundingRect: MKMapRect {
+        return self.selectedDataSource.boundingRect
     }
 }

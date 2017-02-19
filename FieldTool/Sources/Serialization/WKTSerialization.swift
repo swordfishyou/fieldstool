@@ -6,59 +6,45 @@
 //  Copyright © 2017 Anatoly Tukhtarov. All rights reserved.
 //
 
-import Foundation
+import MapKit
 
 protocol WKTSerizalization {
-    associatedtype Output: Geometry
-    func geometry(from input: WKTType) -> Output?
+    func geometry(from input: WKTType) -> Geometry
 }
 
 struct WKTPointSerialization: WKTSerizalization {
-    typealias Output = Point
-    
-    func geometry(from input: WKTType) -> Point? {
-        if input.components.count != 1 {
-            return nil
-        }
-        
-        guard let component = input.components.first, component.coordinates.count == 1 else {
-            return nil
-        }
-        
-        return Point(coordinates: component.coordinates)
+    func geometry(from input: WKTType) -> Geometry {
+        return Point(coordinates: input.components.first!.coordinates)
     }
 }
 
 struct WKTLineSerialization: WKTSerizalization {
-    typealias Output = Line
-    
-    func geometry(from input: WKTType) -> Line? {
-        if input.components.count != 1 {
-            return nil
-        }
-        
-        guard let component = input.components.first, component.coordinates.count > 1 else {
-            return nil
-        }
-        
-        return Line(coordinates: component.coordinates)
+    func geometry(from input: WKTType) -> Geometry {
+        return Line(coordinates: input.components.first!.coordinates)
     }
 }
 
 struct WKTPolygonSerialization: WKTSerizalization {
-    typealias Output = Polygon
-    
-    func geometry(from input: WKTType) -> Polygon? {
-        if input.components.count < 1 {
-            return nil
-        }
-        
-        guard let body = input.components.first, body.coordinates.count > 1 else {
-            return nil
-        }
-        
+    func geometry(from input: WKTType) -> Geometry {
         let interiorPolygons = Array(input.components[1..<input.components.endIndex])
-        return Polygon(coordinates: body.coordinates,
+        return Polygon(coordinates: input.components.first!.coordinates,
                        interiorPolygons: interiorPolygons.map { Polygon(coordinates: $0.coordinates, interiorPolygons: nil) })
+    }
+}
+
+struct WKTSerializer: WKTSerizalization {
+    func geometry(from input: WKTType) -> Geometry {
+        return self.serialization(for: input).geometry(from: input)
+    }
+    
+    private func serialization(for input: WKTType) -> WKTSerizalization {
+        switch input.name {
+        case "POINT":
+            return WKTPointSerialization()
+        case "LINESTRING":
+            return WKTLineSerialization()
+        default:
+            return WKTPolygonSerialization()
+        }
     }
 }

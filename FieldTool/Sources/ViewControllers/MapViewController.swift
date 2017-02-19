@@ -11,8 +11,6 @@ class MapViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var dataSource: SegmentedMapViewDataSource!
-    var fieldsDataSource: FieldsMapViewDataSource!
-    var hotspotsDataSource: HotspotsMapViewDataSource!
     let fieldAnnotationController = FieldAnntotationController()
     let hotspotAnnotationController = HotspotAnntotationController()
     
@@ -24,12 +22,12 @@ class MapViewController: UIViewController {
         var dataSources = [MapViewDataSource]()
         let fieldsStorage = FieldsStorage()
         if let fields = fieldsStorage.all() {
-            dataSources.append(FieldsMapViewDataSource(fields: fields))
+            dataSources.append(WKTMapViewDataSource<Field, FieldAnnotation>(objects: fields))
         }
         
         let hotspotsStorage = HotspotsStorage()
         if let hotspots = hotspotsStorage.all() {
-            dataSources.append(HotspotsMapViewDataSource(hotspots: hotspots))
+            dataSources.append(WKTMapViewDataSource<Hotspot, HotspotAnnotation>(objects: hotspots))
         }
         
         let compoundDataSource = CompoundMapViewDataSource(dataSources: dataSources)
@@ -44,15 +42,11 @@ class MapViewController: UIViewController {
         
         self.dataSource.selectedDataSourceIndex = sender.selectedSegmentIndex
         
-        if let overlays = self.dataSource.overlays() {
-            self.mapView.addOverlays(overlays)
-        }
+        self.mapView.addOverlays(self.dataSource.overlays)
+        self.mapView.addAnnotations(self.dataSource.annotations)
         
-        if let annotations = self.dataSource.annotations() {
-            self.mapView.addAnnotations(annotations)
-        }
-        
-        self.mapView.visibleMapRect = self.mapView.mapRectThatFits(self.dataSource.boundingRect(), edgePadding: UIEdgeInsetsMake(15, 15, 15, 15))
+        self.mapView.visibleMapRect = self.mapView.mapRectThatFits(self.dataSource.boundingRect,
+                                                                   edgePadding: UIEdgeInsetsMake(15, 15, 15, 15))
     }
 }
 

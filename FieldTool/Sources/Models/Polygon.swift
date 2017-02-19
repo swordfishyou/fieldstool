@@ -9,18 +9,17 @@
 import MapKit
 
 struct Polygon: Geometry {
-    typealias Shape = MKPolygon
-    typealias ShapeRenderer = MKPolygonRenderer
-    
     var coordinates: [CLLocationCoordinate2D]
     var interiorPolygons: [Polygon]?
     
-    var shape: MKPolygon {
-        let polygons = self.interiorPolygons?.map { $0.shape }
+    var shape: Shape {
+        let polygons = self.interiorPolygons?.map { MKPolygon(coordinates: $0.coordinates,
+                                                              count: $0.coordinates.count,
+                                                              interiorPolygons: nil) }
         return MKPolygon(coordinates: self.coordinates, count: self.coordinates.count, interiorPolygons: polygons)
     }
     
-    var renderer: MKPolygonRenderer? {
-        return MKPolygonRenderer(polygon: self.shape)
+    var renderer: Renderer? {
+        return MKPolygonRenderer(overlay: self.shape.overlay!)
     }
 }
