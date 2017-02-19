@@ -6,7 +6,7 @@
 //  Copyright © 2017 Anatoly Tukhtarov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Field {
     var identifier: Int
@@ -15,4 +15,10 @@ struct Field {
     var area: Double
     var geometryString: String
     var cropColorString: String
+}
+
+extension Field {
+    var styles: FieldStyle {
+        return FieldStyle(fillColor: UIColor(hexString: self.cropColorString)!)
+    }
 }

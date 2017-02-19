@@ -13,3 +13,9 @@ struct Hotspot {
     var type: Int
     var geometryString: String
 }
+
+extension Hotspot {
+    var annotationImageName: String {
+        return "map-annotation-\(self.type)"
+    }
+}
