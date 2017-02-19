@@ -16,7 +16,7 @@ struct FieldAnntotationController: AnntotationController {
         return "fieldReuseIdentifier"
     }
     
-    func configurate(_ view: FieldAnnotationView, with annotation: FieldAnnotation) {
+    func configure(_ view: FieldAnnotationView, with annotation: FieldAnnotation) {
         view.titleLabel.text = annotation.object.number
         view.canShowCallout = true
         view.setNeedsLayout()

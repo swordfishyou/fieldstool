@@ -16,7 +16,7 @@ struct HotspotAnntotationController: AnntotationController {
         return "hotspotReuseIdentifier"
     }
     
-    func configurate(_ view: MKAnnotationView, with annotation: HotspotAnnotation) {
+    func configure(_ view: MKAnnotationView, with annotation: HotspotAnnotation) {
         view.image = UIImage(named: annotation.object.annotationImageName)
         view.centerOffset = CGPoint(x: 0, y: -view.bounds.midY)
     }

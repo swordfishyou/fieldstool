@@ -20,8 +20,12 @@ struct WKTMapViewDataSource<T: GeometryContainer, U: GeometryAnnotation>: Geomet
     
     init(objects: [T]) {
         self.objects = objects
+        self.parsed = self.parsedObjects(form: objects)
+    }
+    
+    private func parsedObjects(form input: [T]) -> [Geometry] {
         let parser = WKTParser()
         let serializer = WKTSerializer()
-        self.parsed = objects.map { parser.parse($0.geometryString) }.flatMap { $0 }.map { serializer.geometry(from: $0) }
+        return input.map { parser.parse($0.geometryString) }.flatMap { $0 }.map { serializer.geometry(from: $0) }
     }
 }

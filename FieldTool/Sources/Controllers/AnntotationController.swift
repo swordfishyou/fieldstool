@@ -11,20 +11,21 @@ import MapKit
 protocol AnntotationController {
     associatedtype Annotation: MKAnnotation
     associatedtype View: MKAnnotationView
+    
     var reuseIdentifier: String { get }
     func mapView(_ mapView: MKMapView, viewFor annotation: Annotation) -> View?
-    func configurate(_ view: View, with annotation: Annotation)
+    func configure(_ view: View, with annotation: Annotation)
 }
 
 extension AnntotationController {
     func mapView(_ mapView: MKMapView, viewFor annotation: Annotation) -> View? {
         if let view = mapView.dequeueReusableAnnotationView(withIdentifier: self.reuseIdentifier) as? View {
-            self.configurate(view, with: annotation)
+            self.configure(view, with: annotation)
             return view
         }
         
         let view = View(annotation: annotation, reuseIdentifier: self.reuseIdentifier)
-        self.configurate(view, with: annotation)
+        self.configure(view, with: annotation)
         return view
     }
 }

@@ -39,8 +39,8 @@
 		890F95751E58840700589BA4 /* MapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95741E58840700589BA4 /* MapViewDataSource.swift */; };
 		890F95761E58840700589BA4 /* MapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95741E58840700589BA4 /* MapViewDataSource.swift */; };
 		890F95781E589D4600589BA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890F95771E589D4600589BA4 /* MapKit.framework */; };
-		890F957B1E598DB200589BA4 /* FieldsMapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F957A1E598DB200589BA4 /* FieldsMapViewDataSource.swift */; };
-		890F957C1E598DB200589BA4 /* FieldsMapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F957A1E598DB200589BA4 /* FieldsMapViewDataSource.swift */; };
+		890F957B1E598DB200589BA4 /* WKTMapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F957A1E598DB200589BA4 /* WKTMapViewDataSource.swift */; };
+		890F957C1E598DB200589BA4 /* WKTMapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F957A1E598DB200589BA4 /* WKTMapViewDataSource.swift */; };
 		890F95811E598E7700589BA4 /* CompoundMapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95801E598E7700589BA4 /* CompoundMapViewDataSource.swift */; };
 		890F95821E598E7700589BA4 /* CompoundMapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95801E598E7700589BA4 /* CompoundMapViewDataSource.swift */; };
 		890F95841E59964000589BA4 /* AnntotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F95831E59964000589BA4 /* AnntotationController.swift */; };
@@ -127,7 +127,7 @@
 		890F95701E58762200589BA4 /* FieldAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldAnnotationView.swift; path = Sources/Views/FieldAnnotationView.swift; sourceTree = "<group>"; };
 		890F95741E58840700589BA4 /* MapViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewDataSource.swift; path = Sources/DataSources/MapViewDataSource.swift; sourceTree = "<group>"; };
 		890F95771E589D4600589BA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		890F957A1E598DB200589BA4 /* FieldsMapViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldsMapViewDataSource.swift; path = Sources/DataSources/FieldsMapViewDataSource.swift; sourceTree = "<group>"; };
+		890F957A1E598DB200589BA4 /* WKTMapViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTMapViewDataSource.swift; path = Sources/DataSources/WKTMapViewDataSource.swift; sourceTree = "<group>"; };
 		890F95801E598E7700589BA4 /* CompoundMapViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompoundMapViewDataSource.swift; path = Sources/DataSources/CompoundMapViewDataSource.swift; sourceTree = "<group>"; };
 		890F95831E59964000589BA4 /* AnntotationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnntotationController.swift; path = Sources/Controllers/AnntotationController.swift; sourceTree = "<group>"; };
 		890F95861E5996AC00589BA4 /* FieldAnntotationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldAnntotationController.swift; path = Sources/Controllers/FieldAnntotationController.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 				89C7F0C61E59E34F0022D47B /* GeometryMapViewDataSource.swift */,
 				890F95801E598E7700589BA4 /* CompoundMapViewDataSource.swift */,
 				890F958C1E59A26E00589BA4 /* SegmentedMapViewDataSource.swift */,
-				890F957A1E598DB200589BA4 /* FieldsMapViewDataSource.swift */,
+				890F957A1E598DB200589BA4 /* WKTMapViewDataSource.swift */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -515,7 +515,7 @@
 				89C7F0AB1E59C6BA0022D47B /* Shape.swift in Sources */,
 				89C7F0DE1E59E4CC0022D47B /* MKMapRect+Union.swift in Sources */,
 				8931A0161E50890100179185 /* WKTType.swift in Sources */,
-				890F957B1E598DB200589BA4 /* FieldsMapViewDataSource.swift in Sources */,
+				890F957B1E598DB200589BA4 /* WKTMapViewDataSource.swift in Sources */,
 				89C7F0E81E59E4CC0022D47B /* String+WKTHelpers.swift in Sources */,
 				890F956A1E586FD300589BA4 /* FieldAnnotation.swift in Sources */,
 				89C7F0E61E59E4CC0022D47B /* MKPolyline+Shape.swift in Sources */,
@@ -571,7 +571,7 @@
 				890F958B1E599DDB00589BA4 /* HotspotAnntotationController.swift in Sources */,
 				89C7F0E31E59E4CC0022D47B /* MKPointAnnotation+Shape.swift in Sources */,
 				89C7F0E71E59E4CC0022D47B /* MKPolyline+Shape.swift in Sources */,
-				890F957C1E598DB200589BA4 /* FieldsMapViewDataSource.swift in Sources */,
+				890F957C1E598DB200589BA4 /* WKTMapViewDataSource.swift in Sources */,
 				8931A0111E50886300179185 /* CoordinatesCollection.swift in Sources */,
 				89C7F0D11E59E4B00022D47B /* DataStorage.swift in Sources */,
 				890F95501E5850C100589BA4 /* Polygon.swift in Sources */,

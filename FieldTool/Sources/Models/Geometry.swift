@@ -29,8 +29,14 @@ extension Geometry {
                 return false
             }
         }
-        
         return true
+    }
+    
+    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
+        guard let renderer = self.renderer else {
+            return false
+        }
+        return renderer.contains(coordinate: coordinate)
     }
     
     func intersects(geometry: Geometry) -> Bool {
@@ -39,15 +45,6 @@ extension Geometry {
                 return true
             }
         }
-        
         return false
-    }
-    
-    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
-        guard let renderer = self.renderer else {
-            return false
-        }
-        
-        return renderer.contains(coordinate: coordinate)
     }
 }

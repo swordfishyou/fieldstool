@@ -17,8 +17,6 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mapView.delegate = self
-        
         var dataSources = [MapViewDataSource]()
         let fieldsStorage = FieldsStorage()
         if let fields = fieldsStorage.all() {
