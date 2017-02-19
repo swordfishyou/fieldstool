@@ -24,8 +24,8 @@ extension Geometry {
     }
     
     func contains(geometry: Geometry) -> Bool {
-        for coordinate in self.coordinates {
-            if !geometry.contains(coordinate: coordinate) {
+        for coordinate in geometry.coordinates {
+            if !self.contains(coordinate: coordinate) {
                 return false
             }
         }
@@ -40,8 +40,8 @@ extension Geometry {
     }
     
     func intersects(geometry: Geometry) -> Bool {
-        for coordinate in self.coordinates {
-            if geometry.contains(coordinate: coordinate) {
+        for coordinate in geometry.coordinates {
+            if self.contains(coordinate: coordinate) {
                 return true
             }
         }
